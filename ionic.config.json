@@ -1,0 +1,7 @@
+{
+  "name": "FolkNews",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

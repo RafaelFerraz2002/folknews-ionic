@@ -1,0 +1,83 @@
+<app-header-noticia></app-header-noticia>
+<ion-content *ngFor="let new of news" padding>
+    <div class="container">
+        <div class="categoria">
+            <p>{{new.tags[0].nome}}</p>
+        </div>
+        <h1>{{new.titulo}}</h1>
+        <div class="descricao">
+            <p>{{new.descricao}}</p>
+        </div>
+        <img src="{{new.multimediaPrincipal}}">
+        <div class="link">
+            <a (click)="shareUrl(new.shareUrl)"><h6>Notícia Original</h6></a>  
+        </div>
+        <hr/>
+        <div class="dados">
+            <h5 class="autor">{{new.autores[0].nome}}</h5>
+            <h5 class="data">{{new.data | date: 'MMM d, y, h:mm a'}}</h5>
+        </div>
+        <hr/>
+        <div class="texto">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Veniam eos, accusamus ex repudiandae earum maiores corporis illo adipisci necessitatibus distinctio, 
+                dolorum ducimus impedit quos quidem iure molestias voluptatem accusantium magnam.</p>
+            </div>
+            <hr/>
+            <div class="avaliar">
+                <h1>Avalie este Artigo</h1>
+            </div>
+            <div class="rating">
+                <button><img src="../../assets/reactions/angry.svg"></button>
+                <button><img src="../../assets/reactions/sad.svg"></button>
+                <button><img src="../../assets/reactions/smile.svg"></button>
+                <button><img src="../../assets/reactions/smiling.svg"></button>
+                <button><img src="../../assets/reactions/hearts.svg"></button>
+            </div>
+            <div class="linha">
+                <hr>
+            </div>
+            <div class="comente">
+                <h1>Deixe o seu comentário</h1>
+            </div>
+            <div class="comentarios">
+                <form #comment="ngForm" (ngSubmit)="postComment(comment)" ngNativeValidate>
+                    <div class="espaco">
+                        <input placeholder="Insira o nome..." name="nome" ngModel required>
+                        <input placeholder="Insira o comentário..." name="comentario" ngModel required>
+                    </div>
+                    <div class="click">
+                        <button type="submit"><ion-icon slot="icon-only" name="arrow-redo-outline"></ion-icon></button>            
+                    </div>
+                </form>
+            </div>
+            <div class="numero">
+                <h6>Comentários:</h6>
+            </div>
+            <div class="commentary" *ngFor="let comment of comments, let i = index">
+                <div class="vista">
+                    <div class="pessoa">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        <h6>{{comment.name}}</h6>
+                    </div>
+                    <p>Hoje</p>
+                </div>
+                <div class="textoComentario">
+                    <p>{{comment.comment}}</p>
+                </div>
+                <hr/>
+            </div>
+        </div>
+        <app-footer></app-footer>
+    </ion-content>
+    <ion-fab vertical="bottom" horizontal="end">
+        <ion-fab-button color="success">
+            <ion-icon name="share-social-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="top">
+            <ion-fab-button><ion-icon name="logo-whatsapp"></ion-icon></ion-fab-button>
+            <ion-fab-button><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+            <ion-fab-button><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+            <ion-fab-button><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+        </ion-fab-list>
+    </ion-fab>

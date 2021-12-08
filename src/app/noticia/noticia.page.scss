@@ -1,0 +1,246 @@
+img {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 16px;
+}
+h1 {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 20px;
+}
+.autor {
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.data {
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+}
+.dados {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -20px;
+    margin-bottom: -15px;
+}
+.texto {
+    width: 295px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+}
+.descricao {
+    width: 295px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    color: #696969;
+}
+.categoria {
+    width: 305px;
+    text-align: justify;
+    padding-left: 11px;
+    color: #A9A9A9;
+    font-size: 12px;
+    margin-bottom: -10px;
+}
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.avaliar {
+    text-align: center;
+    margin-top: 20px;
+}
+.likeDislike {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    .like {
+        ion-button {
+            width: 60px;
+            height: 40px;
+            ion-icon {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    .dislike {
+        ion-button {
+            width: 60px;
+            height: 40px;
+            ion-icon {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+.comentarios {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    form {
+        display: flex;
+    }
+    .espaco {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        input:first-child {
+            height: 35px;
+            width: 230px;
+            border-radius: 5px 0px 0px 0px;
+            border: 1px solid #808080;
+            outline: 0;
+            padding: 0 16px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            margin: -0.5px;
+        }
+        & > input {
+            height: 35px;
+            width: 230px;
+            border-radius: 0px 0px 0px 5px;
+            border: 1px solid #808080;
+            outline: 0;
+            padding: 0 16px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            margin: -0.5px;
+        }
+    }
+    .click {
+        display: flex;
+        align-items: center;
+        button {
+            margin-left: -1px;
+            background-color: transparent;
+            width: 50px;
+            height: 69px;
+            background-color: #e5e5e5;
+            border-radius: 0 5px 5px 0;
+            border: 1px solid #6c757d;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            ion-icon {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+.comente {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.container {
+    margin-bottom: 60px;
+}
+.vista {
+    display: flex;
+    align-items: center;
+    margin: 0 24px;
+    justify-content: space-between;
+    .pessoa {
+        display: flex;
+        align-items: center;
+        font-size: 11px;
+        ion-icon {
+            width: 25px;
+            height: 25px;
+        }
+        h6 {
+            margin-left: 3px;
+            color: #686767;
+        }
+    }
+    .dias {
+        color: #A9A9A9;
+        font-size: 12px;
+    }
+}
+.textoComentario {
+    padding-left: 26px;
+    padding-right: 26px;
+    margin-top: -18px;
+}
+.likes {  
+    display: flex;
+    align-items: center;
+    margin-right: -20px;
+    button {
+        background-color: transparent;
+        margin: 0 14px;
+        height: 40px;
+        width: 50px;
+        ion-icon {
+            height: 10px;
+            width: 20px;
+        }
+    }
+}
+.algo {
+    p {
+        text-align: center;
+        letter-spacing: 10px;
+        font-weight: bold;
+        color: #A9A9A9;
+    }
+}
+.numero {
+    h6 {
+        margin-left: 12px;
+        font-weight: bold;
+    }
+}
+.linha {
+    hr {
+        width: 100px;
+    }
+}
+.rating {
+    width: 300px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    margin: 0 auto;
+    border-radius: 10px;
+    justify-content: space-between;
+    button {
+        margin: 10px;
+        height: 90px;
+        width: 70px;
+        background-color: transparent;
+        img {
+            transition: all 0.1s ease-out;
+            &:active {
+                margin-top: -10px;
+                
+            }
+            &:after {
+                transition: all 0.1s ease-in;
+            }
+        }
+    }
+}
+.link {
+    margin-left: 48px;
+    margin-top: -15px;
+    h6 {
+        font-size: 10px;
+    }
+    a {
+        color: #696969;
+        cursor: pointer;
+    }
+}
